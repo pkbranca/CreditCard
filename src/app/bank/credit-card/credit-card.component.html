@@ -1,0 +1,66 @@
+<p>credit-card works!</p>
+<div class="container">
+
+
+    <div class="card">
+        <figure class="card__figure">
+            <img src="https://conta.nubank.com.br/images/nu-white.png" class="card__figure--logo" />
+        </figure>
+        <div class="card__reader">
+            <div class="card__reader--risk card__reader--risk-one"></div>
+            <div class="card__reader--risk card__reader--risk-two"></div>
+            <div class="card__reader--risk card__reader--risk-three"></div>
+            <div class="card__reader--risk card__reader--risk-four"></div>
+        </div>
+        <p class="card__number">{{creditCardText}}</p>
+        <div class="card__dates">
+            <span class="card__dates--first">{{month}}/{{year}}</span>
+        </div>
+        <p class="card__name">GABRIEL FERREIRA<p>
+                <div class="card__flag">
+                    <div class="card__flag--globe"></div>
+                    <div class="card__flag--red"></div>
+                    <div class="card__flag--yellow"></div>
+                </div>
+    </div>
+
+    <div class="card-form">
+        <div class="form-group">
+            <p>Credit card</p>
+            <input (input)="selectChangeCard($event)" maxlength="19" class="form-control" type="text"
+                [(ngModel)]='creditCard' appCreditCard />
+        </div>
+        <div class="form-group">
+            <div class="row">
+            <div class="card-form__month col-md-6">
+                <p>Month</p>
+                <select (change)="selectChangeMonth($event)" class="form-control" id="exampleFormControlSelect1">
+                    <option value="" selected disabled>Month</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                </select>
+            </div>
+            <div class="card-form__year col-md-6">
+                <p>Year</p>
+                <select (change)="selectChangeYear($event)" class="form-control" id="exampleFormControlSelect1">
+                    <option value="" selected disabled>Year</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option> 
+                </select>
+            </div>
+        </div>
+        </div>
+        <button class="btn btn-primary" (click)="getInputValue()">Send</button>
+
+    </div>
+</div>

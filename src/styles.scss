@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --purple: #892a92;
+    --purple2: #70217a;
+    --white: #f6d3fd;
+    --height: 222px;
+    --width: 350px;
+    --font: "Overpass Mono", monospaced;
+
+    --masterFont: "Raleway", sans-serif;
+  }
+  
+  body {
+    --baseColor: #c2e59c;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    background: var(--baseColor);
+    background: linear-gradient(to right, #64b3f4, var(--white));
+  }
+  
