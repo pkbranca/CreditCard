@@ -12,7 +12,7 @@
             <div class="card__reader--risk card__reader--risk-three"></div>
             <div class="card__reader--risk card__reader--risk-four"></div>
         </div>
-        <p class="card__number">{{creditCardText}}</p>
+        <p class="card__number" [ngStyle]="validate()?{'background-color':'red'}:{'background-color':'green'}">{{creditCardText}}</p>
         <div class="card__dates">
             <span class="card__dates--first">{{month}}/{{year}}</span>
         </div>
@@ -43,7 +43,7 @@
                     <option value="05">05</option>
                 </select>
             </div>
-            <div class="card-form__year col-md-6">
+            <div class="card-form__year col-md-6" >
                 <p>Year</p>
                 <select (change)="selectChangeYear($event)" class="form-control" id="exampleFormControlSelect1">
                     <option value="" selected disabled>Year</option>

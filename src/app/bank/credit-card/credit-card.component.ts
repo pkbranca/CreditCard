@@ -43,6 +43,12 @@ export class CreditCardComponent implements OnInit {
     this.creditCardText = this.creditCard;
   }
 
+  validate()
+  {
+    console.log("LOGGGG");
+    return true;
+  }
+
   selectChangeMonth(event){ 
     this.month = event.target.value;
   }
